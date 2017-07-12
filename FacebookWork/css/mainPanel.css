@@ -1,0 +1,37 @@
+.column {
+    float: left;
+    position: relative;
+    width: 20%;
+    text-align: center;
+  
+    /*for demo purposes only 
+    background: #f2f2f2;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;*/
+}
+
+.column-offset-1 {
+    left: 20%;
+}
+.column-offset-2 {
+    left: 40%;
+}
+.column-offset-3 {
+    left: 60%;
+}
+.column-offset-4 {
+    left: 80%;
+}
+
+.column-inset-1 {
+    left: -20%;
+}
+.column-inset-2 {
+    left: -40%;
+}
+.column-inset-3 {
+    left: -60%;
+}
+.column-inset-4 {
+    left: -80%;
+}

@@ -1,0 +1,30 @@
+//linking
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+
+
+1.
+//get dept courseID sectionID from certain ID
+//Assume ID = 123, return dept, courseID, sectionID
+//$dept,$courseID,$sectionID will have the related value
+$dept;
+$courseID;
+$sectionID;
+$sql = "SELECT dept, courseID, sectionID FROM course WHERE ID=595";
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_assoc($result)) {
+    $dept = $row['dept'];
+    $courseID = $row['courseID'];
+    $sectionID = $row['sectionID'];
+}
+mysqli_close($conn);
+

@@ -1,0 +1,9 @@
+#loginButton {
+    background-color: #4CAF50; /* Green */
+    color: blue;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 32px;
+    onclick:"location.href='http://google.com'";
+}
