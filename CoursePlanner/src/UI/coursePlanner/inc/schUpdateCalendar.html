@@ -1,0 +1,267 @@
+<!-- 	
+	This file is the content of addTask dialog 
+-->
+
+
+<!-- To manipulate global var sch_weekly_task -->
+<script type="text/javascript" src="js/schDBParameters.js"></script>
+
+<div style="margin: 5px;">Weekly Repeated Task: <input type="checkbox" id="weekly-task"></div>
+<script>
+
+	$("#weekly-task").change(function() {
+	    if(this.checked) {
+	        $(".date-range").show();
+	        sch_weekly_task = true;
+	    } else {
+	    	$(".date-range").hide();
+	    	sch_weekly_task = false;
+	    }
+	    //console.log(sch_weekly_task);
+	});	
+</script>
+
+
+
+
+<div class="date-range">
+	<div type="display: inline;">
+		<div style="float: left;"><p>Start Date</p></div>
+		<div style="float: right; "><input type="text"  value="yyyy/mm/dd" id="start-date-user-input" ></div>
+
+	    <script type="text/javascript">$('#start-date-user-input').fdatepicker({
+	      format: 'yyyy/mm/dd', 
+	    });
+		</script>
+	</div>
+	<br>
+	<br>
+	<div type="display: inline;">
+		<div style="float: left;"><p>End Date</p></div>
+		<div style="float: right; "><input type="text"  value="yyyy/mm/dd" id="end-date-user-input" ></div>
+
+	    <script type="text/javascript">$('#end-date-user-input').fdatepicker({
+	      format: 'yyyy/mm/dd', 
+	    });
+
+
+		</script>
+	</div>
+	<br>
+</div>
+
+
+<div style="text-align: center; text-align-last: center; margin:10px;">
+	<div class="date-range" class="add-entry" style="float: left; display: inline-block;">
+		<div>Date:</div>
+		<br>
+		<select id="date-dropdown-menu">
+			<option value="mon">Monday</option>
+			<option value="tue">Tuesday</option>
+			<option value="wed">Wednesday</option>
+			<option value="thu">Thursday</option>
+			<option value="fri">Friday</option>
+			<option value="sat">Saturday</option>
+			<option value="sun">Sunday</option>
+		</select>
+	</div>
+	<div class="add-entry" style="float: center; display: inline-block;">
+		<div>Start Time:</div>
+		<br>
+		<select id="start-time-dropdown-menu">
+			<option value=6:00>6:00</option>
+			<option value=6:30>6:30</option>
+			<option value=7:00>7:00</option>
+			<option value=7:30>7:30</option>
+			<option value=8:00>8:00</option>
+			<option value=8:30>8:30</option>
+			<option value=9:00>9:00</option>
+			<option value=9:30>9:30</option>
+			<option value=10:00>10:00</option>
+			<option value=10:30>10:30</option>
+			<option value=11:00>11:00</option>
+			<option value=11:30>11:30</option>
+			<option value=12:00>12:00</option>
+			<option value=12:30>12:30</option>
+			<option value=13:00>13:00</option>
+			<option value=13:30>13:30</option>
+			<option value=14:00>14:00</option>
+			<option value=14:30>14:30</option>
+			<option value=15:00>15:00</option>
+			<option value=15:30>15:30</option>
+			<option value=16:00>16:00</option>
+			<option value=16:30>16:30</option>
+			<option value=17:00>17:00</option>
+			<option value=17:30>17:30</option>
+			<option value=18:00>18:00</option>
+			<option value=18:30>18:30</option>
+			<option value=19:00>19:00</option>
+			<option value=19:30>19:30</option>
+			<option value=20:00>20:00</option>
+			<option value=20:30>20:30</option>
+			<option value=21:00>21:00</option>
+			<option value=21:30>21:30</option>
+			<option value=22:00>22:00</option>
+			<option value=22:30>22:30</option>
+			<option value=23:00>23:00</option>
+			<option value=23:30>23:30</option>
+		</select>
+	</div>
+	<div class="add-entry" style="float: right; display: inline-block;">
+		<div>End Time:</div>
+		<br>
+		<select id="end-time-dropdown-menu">
+			<option value=6:00>6:00</option>
+			<option value=6:30>6:30</option>
+			<option value=7:00>7:00</option>
+			<option value=7:30>7:30</option>
+			<option value=8:00>8:00</option>
+			<option value=8:30>8:30</option>
+			<option value=9:00>9:00</option>
+			<option value=9:30>9:30</option>
+			<option value=10:00>10:00</option>
+			<option value=10:30>10:30</option>
+			<option value=11:00>11:00</option>
+			<option value=11:30>11:30</option>
+			<option value=12:00>12:00</option>
+			<option value=12:30>12:30</option>
+			<option value=13:00>13:00</option>
+			<option value=13:30>13:30</option>
+			<option value=14:00>14:00</option>
+			<option value=14:30>14:30</option>
+			<option value=15:00>15:00</option>
+			<option value=15:30>15:30</option>
+			<option value=16:00>16:00</option>
+			<option value=16:30>16:30</option>
+			<option value=17:00>17:00</option>
+			<option value=17:30>17:30</option>
+			<option value=18:00>18:00</option>
+			<option value=18:30>18:30</option>
+			<option value=19:00>19:00</option>
+			<option value=19:30>19:30</option>
+			<option value=20:00>20:00</option>
+			<option value=20:30>20:30</option>
+			<option value=21:00>21:00</option>
+			<option value=21:30>21:30</option>
+			<option value=22:00>22:00</option>
+			<option value=22:30>22:30</option>
+			<option value=23:00>23:00</option>
+			<option value=23:30>23:30</option>
+		</select>
+	</div>
+</div>
+
+
+<p class="add-entry" style="text-align: center;"">------------------------------------------</p>
+
+
+<div style="text-align: center; margin:10px;">
+
+	<div style="margin:10px;">
+		<label>Title: </label>
+		<input type="text" style="z-index:8000;text-align: center;" name="title">
+	</div>
+	<div style="margin:10px;">
+		<label>Location:</label> 
+		<input type="text" style="z-index:10000;text-align: center;" name="location">
+	</div>
+	<div style="margin:10px;">
+		<label>Information:</label> 
+		<input type="textarea" style="z-index:10000;text-align: center;" name="info">
+	</div>
+</div>
+
+<p style="text-align: center;"">------------------------------------------</p>
+
+<div style="margin: 5px;">Choose Color: <input type="checkbox" id="set-color"></div>
+<script>
+	$("#set-color").change(function() {
+	    if(this.checked) {
+	        $(".customize-color").show();
+	    } else {
+	    	$(".customize-color").hide();
+	    }
+	    
+	});	
+</script>
+
+<div class="customize-color" style="text-align: center; text-align-last: center; margin:10px;">
+	<p>background color:</p>
+	<select id="bg-color-dropdown-menu">
+		<option value=""></option>
+		<option value="#DB7093">palevioletred</option>
+		<option value="#D02090">violetred</option>
+		<option value="#D8BFD8">thistle</option>
+		<option value="#7EC0EE">skyblue</option>
+		<option value="#43CD80">seagreen</option>
+		<option value="#8B6508">darkgoldenrod</option>
+		<option value="black">black</option>
+		<option value="white">white</option>
+		<option value="blue">blue</option>
+		<option value="green">green</option>
+		<option value="red">red</option>
+		<option value="yellow">yellow</option>
+		<option value="orange">orange</option>
+	</select>
+</div>
+
+
+<div class="customize-color" style="text-align: center; text-align-last: center; margin:10px;">
+	<p>text color:</p>
+	<select id="text-color-dropdown-menu">
+		<option value=""></option>
+		<option value="#DB7093">palevioletred</option>
+		<option value="#D02090">violetred</option>
+		<option value="#D8BFD8">thistle</option>
+		<option value="#7EC0EE">skyblue</option>
+		<option value="#43CD80">seagreen</option>
+		<option value="#8B6508">darkgoldenrod</option>
+		<option value="black">black</option>
+		<option value="white">white</option>
+		<option value="blue">blue</option>
+		<option value="green">green</option>
+		<option value="red">red</option>
+		<option value="yellow">yellow</option>
+		<option value="orange">orange</option>
+	</select>
+</div>
+
+<p style="text-align: center;"">------------------------------------------</p>
+
+<div style="margin: 5px;">Choose Reminding Date: <input type="checkbox" id="set-reminder"></div>
+<div class="customize-reminder"  style="text-align: center; text-align-last: center; margin:10px;">
+	Before 
+	<select id="reminder-dropdown-menu">
+		<option value=0>0</option>
+		<option value=1>1</option>
+		<option value=2>2</option>
+		<option value=3>3</option>
+		<option value=4>4</option>
+		<option value=5>5</option>
+	</select>
+	 days to remind me !
+</div>
+<script>
+	$("#set-reminder").change(function() {
+	    if(this.checked) {
+	        $(".customize-reminder").show();
+	    } else {
+	    	$(".customize-reminder").hide();
+	    }
+	    
+	});	
+</script>
+
+
+
+
+
+<!-- Initialize the state of some content of this html -->
+<script type="text/javascript">
+	$(".date-range").hide();
+	$(".customize-color").hide();
+	$(".customize-reminder").hide();
+</script>
+
+
+   

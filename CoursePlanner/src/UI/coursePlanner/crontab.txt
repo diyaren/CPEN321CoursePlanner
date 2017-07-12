@@ -1,0 +1,2 @@
+MAILTO=addombowsky@shaw.ca
+00 4 * * * /usr/bin/php /var/www/html/email.php >/dev/null
